@@ -1,0 +1,4 @@
+npm init -y
+npm install express mongoose axios
+npm i cors
+npm install recharts
