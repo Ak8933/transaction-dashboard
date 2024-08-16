@@ -5,7 +5,7 @@ const Navbar = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/initializeDB`);
+                const response = await fetch(`https://transaction-dashboard-backend.onrender.com/api/initializeDB`);
                 const result = await response.json();
 
             } catch (error) {
