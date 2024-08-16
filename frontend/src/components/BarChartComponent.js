@@ -8,7 +8,7 @@ const BarChartComponent = ({ selectedMonth }) => {
     useEffect(() => {
         const fetchBarChartData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/bar-chart?month=${selectedMonth}`);
+                const response = await fetch(`https://transaction-dashboard-backend.onrender.com/api/bar-chart?month=${selectedMonth}`);
                 const result = await response.json();
 
                 // Transform the response data into the format expected by Recharts
