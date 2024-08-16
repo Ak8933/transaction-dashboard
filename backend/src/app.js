@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Database connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/transactionDB', {
+mongoose.connect(process.env.MONGO_URI  || 'mongodb+srv://ak3009:Akarsh12%40@cluster0.hapdl.mongodb.net/roxiller?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -24,6 +24,9 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/transaction
 
 // Middleware
 app.use(cors());
+
+
+
 app.use(express.json());
 
 // Routes

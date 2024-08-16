@@ -3,11 +3,15 @@ import TransactionsTable from './components/TransactionsTable';
 import TransactionStatistics from './components/TransactionStatistics';
 import BarChartComponent from './components/BarChartComponent';
 import './App.css'; // Import the CSS file
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
     const [selectedMonth, setSelectedMonth] = useState('March');
 
     return (
+        <>
+        <Navbar/>
         <div className="app-container">
             <h1>Transaction Dashboard</h1>
             <select
@@ -24,6 +28,8 @@ const App = () => {
             <BarChartComponent selectedMonth={selectedMonth} />
             <TransactionsTable selectedMonth={selectedMonth} />
         </div>
+        <Footer/>
+        </>
     );
 };
 
