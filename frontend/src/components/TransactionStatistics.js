@@ -11,7 +11,7 @@ const TransactionStatistics = ({ selectedMonth }) => {
     useEffect(() => {
         const fetchStatistics = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/statistics?month=${selectedMonth}`);
+                const response = await fetch(`https://transaction-dashboard-backend.onrender.com/api/statistics?month=${selectedMonth}`);
                 const data = await response.json();
                 setStatistics({
                     totalAmount: data.totalAmount,
