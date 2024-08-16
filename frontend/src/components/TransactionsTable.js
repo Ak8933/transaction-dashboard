@@ -12,7 +12,7 @@ const TransactionsTable = () => {
     useEffect(() => {
         const fetchTransactions = async () => {
             try {
-                const url = month === 'Fetch All' ? 'http://localhost:5000/api/transactions' : `http://localhost:5000/api/transactions?month=${month}`;
+                const url = month === 'Fetch All' ? 'https://transaction-dashboard-backend.onrender.com/api/transactions' : `https://transaction-dashboard-backend.onrender.com/api/transactions?month=${month}`;
                 const response = await fetch(url, {
                     method: "GET",
                     headers: {
